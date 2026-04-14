@@ -1,0 +1,181 @@
+/* ================= GLOBAL ================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 60vh;
+  background: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1') no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color: rgba(17, 17, 16, 0.65);
+  background-blend-mode: darken;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: gold;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* ================= LOCATIONS ================= */
+.locations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ================= LOCATION CARD ================= */
+.loc-card {
+  width: 100%;
+  max-width: 500px;
+  height: 160px;
+
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+
+  border: 1px solid gold;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.5);
+
+  transition: 0.3s;
+}
+
+/* IMAGE */
+.loc-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARK GRADIENT OVERLAY */
+.loc-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+/* TEXT */
+.loc-info {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+.loc-info h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  COLOR: WHITESMOKE;
+}
+
+.loc-info p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #ddd;
+}
+
+/* ARROW */
+.loc-card::after {
+  content: "›";
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 26px;
+  color: gold;
+}
+
+/* HOVER */
+.loc-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(255, 193, 7, 0.8);
+}
+
+/* ================= SALON SECTION ================= */
+.salon-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* ================= SALON CARD ================= */
+.card {
+  background: #232020;
+  width: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 10px;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px #e1900c;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+/* ================= BUTTON ================= */
+button {
+  padding: 10px;
+  background: gold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: orange;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .loc-card {
+    max-width: 90%;
+    height: 140px;
+  }
+}

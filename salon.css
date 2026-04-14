@@ -1,0 +1,124 @@
+/* ================= GLOBAL ================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 40vh;
+  background: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: gold;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 16px;
+}
+
+/* ================= SALON LIST ================= */
+.salon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ================= SALON CARD ================= */
+.salon-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+
+  background: #232020;
+  border-radius: 12px;
+
+  border: 1px solid gold;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.5);
+
+  transition: 0.3s;
+}
+
+/* IMAGE */
+.salon-card img {
+  width: 100px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* TEXT */
+.salon-info {
+  flex: 1;
+}
+
+.salon-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.salon-info p {
+  margin: 3px 0;
+  font-size: 13px;
+  color: #ddd;
+}
+
+/* BUTTON */
+.salon-card button {
+  padding: 8px 12px;
+  background: gold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.salon-card button:hover {
+  background: orange;
+}
+
+/* HOVER */
+.salon-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 193, 7, 0.8);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .salon-card {
+    max-width: 90%;
+  }
+
+  .salon-card img {
+    width: 80px;
+    height: 70px;
+  }
+}

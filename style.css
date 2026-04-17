@@ -11,7 +11,7 @@ body {
 
 /* ================= HERO ================= */
 .hero {
-  height: 100vh;
+  height: 30vh;
 
   display: flex;
   justify-content: center;
@@ -61,7 +61,7 @@ body {
 .loc-card {
   width: 90%;
   max-width: 500px;
-  height: 160px;
+  height: 100px;
 
   border-radius: 12px;
   overflow: hidden;
@@ -85,7 +85,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
- /* background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);*/
+     background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
 }
 
 /* TEXT */
@@ -93,17 +93,17 @@ body {
   position: absolute;
   bottom: 15px;
   left: 15px;
+  color: #ffffff
 }
 
 .loc-info h3 {
   margin: 0;
   font-size: 20px;
-  color: #ffffff;
 }
 
 .loc-info p {
   font-size: 13px;
-  color: #ffffff;
+  color: #ccc;
 }
 
 /* HOVER */

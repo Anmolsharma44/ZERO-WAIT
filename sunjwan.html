@@ -3,6 +3,10 @@
 <head>
   <title>SUNJWAN - Zero Wait - Salons</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- WhatsApp Icon CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="stylesheet" href="salon.css">
 </head>
 
@@ -11,13 +15,13 @@
 <!-- HEADER -->
 <div class="hero">
   <h1>Available Salons</h1>
-  <p>Choose your salon</p>
+  
 </div>
 
 <!-- SALON LIST -->
 <div class="salon-container">
 
-  <!-- MEN SALON -->
+  <!-- CARD -->
   <div class="salon-card">
     <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f">
     <div class="salon-info">
@@ -25,10 +29,15 @@
       <p>Haircut • Beard • Facial</p>
       <p>⭐ 4.5 • Starting ₹199</p>
     </div>
-    <button onclick="bookNow('Royal Men Salon')">Book Now</button>
+
+    <div class="action">
+      <button onclick="bookNow('Royal Men Salon')">
+        <i class="fab fa-whatsapp"></i> Book
+      </button>
+      <span>via WhatsApp</span>
+    </div>
   </div>
 
-  <!-- WOMEN SALON -->
   <div class="salon-card">
     <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
     <div class="salon-info">
@@ -36,7 +45,13 @@
       <p>Makeup • Facial • Hair Spa</p>
       <p>⭐ 4.7 • Starting ₹299</p>
     </div>
-    <button onclick="bookNow('Glow Women Salon')">Book Now</button>
+
+    <div class="action">
+      <button onclick="bookNow('Glow Women Salon')">
+        <i class="fab fa-whatsapp"></i> Book
+      </button>
+      <span>via WhatsApp</span>
+    </div>
   </div>
 
   <div class="salon-card">
@@ -46,7 +61,13 @@
       <p>Haircut • Styling • Coloring</p>
       <p>⭐ 4.3 • Starting ₹149</p>
     </div>
-    <button onclick="bookNow('Style Hub')">Book Now</button>
+
+    <div class="action">
+      <button onclick="bookNow('Style Hub')">
+        <i class="fab fa-whatsapp"></i> Book
+      </button>
+      <span>via WhatsApp</span>
+    </div>
   </div>
 
   <div class="salon-card">
@@ -56,16 +77,21 @@
       <p>Facial • Spa • Bridal Makeup</p>
       <p>⭐ 4.8 • Starting ₹499</p>
     </div>
-    <button onclick="bookNow('Elite Beauty Lounge')">Book Now</button>
+
+    <div class="action">
+      <button onclick="bookNow('Elite Beauty Lounge')">
+        <i class="fab fa-whatsapp"></i> Book
+      </button>
+      <span>via WhatsApp</span>
+    </div>
   </div>
 
 </div>
 
-<!-- WHATSAPP SCRIPT -->
 <script>
 function bookNow(salonName) {
-  let phone = "919419624188"; // replace with your WhatsApp business number
-  let message = `Hello, I want to book an appointment at ${salonName}  in SUNJWAN`;
+  let phone = "919419624188";
+  let message = `Hello, I want to book an appointment at ${salonName} in SUNJWAN`;
   let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
 }
